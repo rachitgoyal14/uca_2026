@@ -8,69 +8,69 @@ void copyArray(int source[], int dest[], int n) {
 }
 
 void generateRan(int arr[],int n){
-        for(int i=0;i<n;i++){
-                arr[i] = rand();
-        }
+	for(int i=0;i<n;i++){
+		arr[i] = rand();
+	}
 }
 
 void generateAsc(int arr[], int n){
-        for(int i = 0;i < n; i++){
-                arr[i] = i + 1;
-        }
+	for(int i = 0;i < n; i++){
+		arr[i] = i + 1;
+	}
 }
 
 void generateDesc(int arr[], int n){
-        for(int i = 0;i < n; i++){
-                arr[i] = n - i;
-        }
+	for(int i = 0;i < n; i++){
+		arr[i] = n - i;
+	}
 }
 
 void printArr(int arr[], int n){
-        for(int i = 0; i < n; i++){
-                printf("%d", arr[i]);
-        }
+	for(int i = 0; i < n; i++){
+		printf("%d", arr[i]);
+	}
 }
 
 void bubbleSort(int arr[],int n){
-        for(int i = 0; i < n; i++){
-                int flag = 0;
-                for(int j = 0; j < n-i-1; j++){
-                        if(arr[j] > arr[j+1]){
-                                int temp = arr[j+1];
-                                arr[j+1] = arr[j];
-                                arr[j] = temp;
-                                flag = 1;
-                        }
-                }
-        if(!flag) break;
-        }
+	for(int i = 0; i < n; i++){
+		int flag = 0;
+		for(int j = 0; j < n-i-1; j++){
+			if(arr[j] > arr[j+1]){
+				int temp = arr[j+1];
+				arr[j+1] = arr[j];
+				arr[j] = temp;
+				flag = 1;
+			}
+		}
+	if(!flag) break;
+	}
 }
 
 
 void insertionSort(int arr[],int n){
-        for(int i = 1;i < n; i++){
-                int key = arr[i];
-                int j = i-1;
-                while(j >= 0 && arr[j] > key){
-                        arr[j+1] = arr[j];
-                        j--;
-                }
-                arr[j+1] = key;
-        }
+	for(int i = 1;i < n; i++){
+		int key = arr[i];
+		int j = i-1;
+		while(j >= 0 && arr[j] > key){
+			arr[j+1] = arr[j];
+			j--;
+		}
+		arr[j+1] = key;
+	}
 }
 
 void selectionSort(int arr[],int n){
-        for(int i = 0; i<n; i++){
-                int min_idx = i;
-                for(int j = i+1;j < n; j++){
-                        if(arr[j] < arr[min_idx]){
-                                min_idx = j;
-                        }
-                }
-                int temp = arr[i];
-                arr[i] = arr[min_idx];
-                arr[min_idx] = temp;
-        }
+	for(int i = 0; i<n; i++){
+		int min_idx = i;
+		for(int j = i+1;j < n; j++){
+			if(arr[j] < arr[min_idx]){
+				min_idx = j;
+			}
+		}
+		int temp = arr[i];
+		arr[i] = arr[min_idx];
+		arr[min_idx] = temp;
+	}
 }
 
 void swap(int* a, int* b) {
@@ -80,7 +80,7 @@ void swap(int* a, int* b) {
 }
 
 int partition(int arr[], int low, int high) {
-    int pivot = arr[high];
+    int pivot = arr[high];    
     int i = low - 1;
     for (int j = low; j <= high - 1; j++) {
         if (arr[j] < pivot) {
@@ -88,13 +88,13 @@ int partition(int arr[], int low, int high) {
             swap(&arr[i], &arr[j]);
         }
     }
-    swap(&arr[i + 1], &arr[high]);
+    swap(&arr[i + 1], &arr[high]);  
     return i + 1;
 }
 
 void quickSort(int arr[], int low, int high) {
-    if (low < high) {
-        int pi = partition(arr, low, high); // pi is the partition returning index of the pivot
+    if (low < high) {       
+        int pi = partition(arr, low, high); // pi is the partition returning index of the pivot 
         // recursion calls for smaller elements
         // and greater or equals elements
         quickSort(arr, low, pi - 1);
@@ -193,7 +193,7 @@ double measureTime(void (*sortFunc)(int[], int), int arr[], int n) {
 
 // // creating special wrapper functions for certain sorting algorithms having unique parameters
 
-// special wrapper for quickSort
+// special wrapper for quickSort 
 double measureQuickSortTime(int arr[], int n) {
     clock_t start = clock();
     quickSort(arr, 0, n - 1);
@@ -217,10 +217,6 @@ int main() {
 
     printf("--- BENCHMARK RESULTS (Time in Milliseconds) ---\n\n");
 
-    // NEW: results.csv so the numbers can be pivoted/plotted directly, instead of re-typing terminal output
-    FILE* csv = fopen("results.csv", "w");
-    fprintf(csv, "InputType,Size,Bubble,Insertion,Selection,Quick,Merge,Heap\n");
-
     const char* inputTypes[] = {"Random", "Ascending", "Descending"};
 
     for (int t = 0; t < 3; t++) {
@@ -231,7 +227,7 @@ int main() {
 
         for (int s = 0; s < numSizes; s++) {
             int n = sizes[s];
-
+            
             // allocate memory dynamically to prevent stack overflows
             int* baseArr = (int*)malloc(n * sizeof(int));
             int* testArr = (int*)malloc(n * sizeof(int));
@@ -255,13 +251,13 @@ int main() {
             copyArray(baseArr, testArr, n);
             t_select = measureTime(selectionSort, testArr, n);
 
-            // 4. Quick Sort
+            // 4. Quick Sort 
             // Warning: Quick sort with fixed last-element pivot will hit O(n^2) worst case on sorted/reverse arrays.
             // If your system's stack size is very limited, it might segfault on larger sorted arrays.
             copyArray(baseArr, testArr, n);
             if ((t == 1 || t == 2) && n > 20000) {
                 // Skips to avoid stack overflow crashes during recursive calls on deep O(n) call stacks
-                t_quick = -1.0;
+                t_quick = -1.0; 
             } else {
                 t_quick = measureQuickSortTime(testArr, n);
             }
@@ -275,22 +271,14 @@ int main() {
             t_heap = measureTime(heapSort, testArr, n);
 
             // Print row formatted clean for easy reading/extraction
-            printf("%d\t%.2f\t%.2f\t\t%.2f\t\t%.2f\t%.2f\t%.2f\n",
+            printf("%d\t%.2f\t%.2f\t\t%.2f\t\t%.2f\t%.2f\t%.2f\n", 
                     n, t_bubble, t_insert, t_select, t_quick, t_merge, t_heap);
-
-            // NEW: log the same row to results.csv
-            fprintf(csv, "%s,%d,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f\n",
-                    inputTypes[t], n, t_bubble, t_insert, t_select, t_quick, t_merge, t_heap);
-            fflush(csv);
-
+           
             free(baseArr);
             free(testArr);
         }
         printf("\n");
     }
-
-    // NEW: close the csv file
-    fclose(csv);
 
     return 0;
 }
