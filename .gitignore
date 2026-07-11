@@ -17,6 +17,8 @@ main_app
 *.gch
 *.pch
 
+*.out
+
 .DS_Store
 
 # Libraries
