@@ -1,4 +1,4 @@
-package java_assignments.consecutiveIntegers;
+package questions.consecutiveIntegers;
 
 import java.util.*;
 
