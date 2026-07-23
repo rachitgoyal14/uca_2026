@@ -1,4 +1,4 @@
-package questions.consecutiveIntegers;
+package questions.longestConsecutiveSequenceOfIntegers;
 
 import java.util.*;
 

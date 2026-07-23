@@ -58,3 +58,8 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+
+./out
+
+uca_2026.iml
