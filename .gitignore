@@ -8,6 +8,8 @@ main_app
 *.obj
 *.elf
 
+uca_2026.iml
+
 # Linker output
 *.ilk
 *.map
@@ -61,5 +63,3 @@ dkms.conf
 
 
 ./out
-
-uca_2026.iml
