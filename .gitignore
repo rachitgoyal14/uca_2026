@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+.idea/
 *.class
 main_app
 # Object files
@@ -18,6 +19,7 @@ uca_2026.iml
 # Precompiled Headers
 *.gch
 *.pch
+
 
 *.out
 
