@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class mySolution {
 
     static class MinStack {
         ArrayList<Integer>stack = new ArrayList<>();
@@ -15,32 +15,41 @@ public class Main {
         }
 
         public void pop() {
-            int toBeRemoved = stack.get(stack.size() - 1);
+            validate();
 
+            int toBeRemoved = stack.get(stack.size() - 1);
             stack.remove(stack.size() - 1);
 
-            if (minStack.get(minStack.size() - 1) == toBeRemoved) {
+            if (minStack.get(minStack.size() - 1).intValue() == toBeRemoved) {
                 minStack.remove(minStack.size() - 1);
             }
         }
 
         public int top() {
+            validate();
             return stack.get(stack.size() - 1);
         }
 
-        public int getMin() { // O(N)
+        public int getMin() { 
+            validate();
             return minStack.get(minStack.size() - 1);
+        }
+
+        private void validate() {
+            if (stack.size() == 0) {
+                throw new NoSuchElementException("Stack is empty!");
+            }
         }
     }
 
     public static void main(String[] args) {
         MinStack stack = new MinStack();
-
+        // System.out.println(stack.getMin());
        stack.push(-2);
        stack.push(0);
        stack.push(-3);
 
-       
+
         System.out.println(stack.getMin());
 
        stack.pop();
