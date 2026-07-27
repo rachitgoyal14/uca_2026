@@ -40,6 +40,7 @@ public class Main {
        stack.push(0);
        stack.push(-3);
 
+       
         System.out.println(stack.getMin());
 
        stack.pop();
