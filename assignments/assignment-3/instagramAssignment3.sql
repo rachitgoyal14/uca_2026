@@ -1,5 +1,5 @@
--- CREATE DATABASE assignment3;
--- use assignment3;
+CREATE DATABASE instagram;
+USE instagram;
 
 CREATE TABLE User (
     user_id   INT PRIMARY KEY,
@@ -79,21 +79,26 @@ INSERT INTO Hashtag (hashtag_id, tag_name) VALUES
 (2,'fun'), 
 (3,'food');
 
+
 INSERT INTO PostHashtag (post_id, hashtag_id) VALUES
 (103,1), 
 (103,2);
+
 
 SELECT COUNT(*) 
 FROM Follow
 WHERE following_id = 1;
 
+
 SELECT COUNT(*)
 FROM Likes
 WHERE post_id = 101;
 
+
 SELECT COUNT(*)
 FROM Posthashtag
 WHERE post_id = 103;
+
 
 SELECT user_id, username
 FROM User
