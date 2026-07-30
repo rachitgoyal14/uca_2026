@@ -70,3 +70,6 @@ public class betterSolution {
         System.out.println(stack.getMin());
     }
 }
+
+// // there are operations that you can do on the data
+// // there are operations that you can do on the definition of the data
