@@ -10,11 +10,14 @@ main_app
 *.elf
 
 uca_2026.iml
-
+./a.out
+a.out
+*.out
 # Linker output
 *.ilk
 *.map
 *.exp
+algorithms/sorting/Complexity_Chart.xlsx
 
 # Precompiled Headers
 *.gch
