@@ -21,6 +21,9 @@ algorithms/sorting/Complexity_Chart.xlsx
 
 # Precompiled Headers
 *.gch
+
+dbms/notes
+
 *.pch
 
 
