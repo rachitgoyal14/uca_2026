@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Main {
     
-    // TIME COMPLEXITY: O(N log N)  — N = total nodes; heap holds up to N elements, not k
-    // SPACE COMPLEXITY: O(N)       — heap size O(N), plus N new nodes allocated
+    // TIME COMPLEXITY: O(N log N) — N = total nodes; heap holds up to N elements, not k
+    // SPACE COMPLEXITY: O(N) — heap size O(N), plus N new nodes allocated
    
     public static ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
@@ -33,8 +33,8 @@ public class Main {
     }
     
     
-    // TIME COMPLEXITY: O(N log k)  — heap holds at most k elements (one per active list)
-    // SPACE COMPLEXITY: O(k)       — heap size bounded by k, nodes are relinked not recreated
+    // TIME COMPLEXITY: O(N log k) — heap holds at most k elements (one per active list)
+    // SPACE COMPLEXITY: O(k) — heap size bounded by k, nodes are relinked not recreated
     
     public static ListNode mergeKListOptimized(ListNode[] lists) {
         if (lists.length == 0) 
