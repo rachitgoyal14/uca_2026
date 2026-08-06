@@ -19,6 +19,9 @@ a.out
 *.exp
 algorithms/sorting/Complexity_Chart.xlsx
 
+questions.md
+
+
 # Precompiled Headers
 *.gch
 
