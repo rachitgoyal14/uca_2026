@@ -1,4 +1,4 @@
-package questions.robotMessageTracker;
+package dsa.hashing.robotMessageTracker;
 
 import java.util.*;
 

@@ -1,5 +1,5 @@
+package dsa.stacks.implementStack;
 import java.util.NoSuchElementException;
-import java.util.*;
 
 public class betterSolution {
     static class MinStack {

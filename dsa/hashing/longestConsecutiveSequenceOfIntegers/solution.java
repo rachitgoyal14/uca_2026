@@ -1,4 +1,4 @@
-package questions.longestConsecutiveSequenceOfIntegers;
+package dsa.hashing.longestConsecutiveSequenceOfIntegers;
 
 import java.util.*;
 

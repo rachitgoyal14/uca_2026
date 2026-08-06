@@ -1,4 +1,4 @@
-package questions.mergeKSortedLists;
+package dsa.sorting.mergeKSortedLists;
 
 import java.util.*;
 

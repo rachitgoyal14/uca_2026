@@ -1,4 +1,4 @@
-package questions.mergeKSortedLists;
+package dsa.sorting.mergeKSortedLists;
 
 class ListNode {
     int val;
