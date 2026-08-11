@@ -20,6 +20,7 @@ void base64_encode(char *input, char *output) {
         int byte1 = input[i];
         int byte2 = 0;
         int byte3 = 0;
+        
 
         if (i + 1 < input_len) {
             byte2 = input[i + 1];
