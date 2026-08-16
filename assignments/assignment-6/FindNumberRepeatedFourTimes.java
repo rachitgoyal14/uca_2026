@@ -1,5 +1,3 @@
-import java.util.*;
-
 class FindNumberRepeatedFourTimes {
 
     public int findNumber(int[] nums) {
@@ -14,10 +12,11 @@ class FindNumberRepeatedFourTimes {
                     countOfOnes++;
             }
 
-            if (countOfOnes % 3 == 1) {
+            if (countOfOnes%3 == 1) {
                 result = result | temp;
             }
         }
+        
 
         return result;
     }
