@@ -34,7 +34,7 @@ void base64_encode(char *input, char *output) {
 
         // split into chunks of 4
         // lookup the ASCII values of each chunk
-        output[j]     = b64_chars[(combined >> 18) & 63];
+        output[j]    = b64_chars[(combined >> 18) & 63];
         output[j+1] = b64_chars[(combined >> 12) & 63];
         output[j+2] = b64_chars[(combined >> 6) & 63];
         output[j+3] = b64_chars[combined & 63];

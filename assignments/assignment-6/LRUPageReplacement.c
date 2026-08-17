@@ -9,7 +9,7 @@ void simulate_lru(int page_requests[], int num_requests, int num_frames) {
     int last_used[num_frames]; // Timestamp array
     int page_faults = 0;
 
-    // Initialize empty slots
+    // initialize empty slots
     for (int i = 0; i < num_frames; i++) {
         frames[i] = -1;
         last_used[i] = -1;

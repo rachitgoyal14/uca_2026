@@ -27,6 +27,13 @@ questions.md
 
 dbms/notes
 
+minHeap
+heapSortBenchMark
+
+.venv
+venv
+env
+.env
 *.pch
 
 
