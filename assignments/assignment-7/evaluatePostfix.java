@@ -26,7 +26,7 @@ public class evaluatePostfix {
 
     public static void main(String[] args) {
 
-        String str = "953+4*2/-";
+        String str = "231*+9-";
 
         int result = evaluatePostfixExpression(str);
 
