@@ -3,6 +3,7 @@ import java.util.*;
 
 public class Main {
     
+    
     class Info {
         int value;
         int valueIndex;
@@ -69,51 +70,14 @@ public class Main {
     public static void main(String[] args) {
         Main solution = new Main();
         
-        // Test case 1: Basic case
-        List<List<Integer>> nums1 = new ArrayList<>();
-        nums1.add(Arrays.asList(4, 10, 15, 24, 26));
-        nums1.add(Arrays.asList(0, 9, 12, 20));
-        nums1.add(Arrays.asList(5, 18, 22, 30));
-        int[] result1 = solution.smallestRange(nums1);
-        System.out.println("Test 1: " + Arrays.toString(result1));
+        List<List<Integer>> nums = new ArrayList<>();
+        nums.add(Arrays.asList(4, 10, 15, 24, 26));
+        nums.add(Arrays.asList(0, 9, 12, 20));
+        nums.add(Arrays.asList(5, 18, 22, 30));
+        int[] result = solution.smallestRange(nums);
+        System.out.println("Test 1: " + Arrays.toString(result));
         
-        // Test case 2: Two lists
-        List<List<Integer>> nums2 = new ArrayList<>();
-        nums2.add(Arrays.asList(1, 2, 3));
-        nums2.add(Arrays.asList(1, 2, 3));
-        int[] result2 = solution.smallestRange(nums2);
-        System.out.println("Test 2: " + Arrays.toString(result2));
-        
-        // Test case 3: Single element in each list
-        List<List<Integer>> nums3 = new ArrayList<>();
-        nums3.add(Arrays.asList(5));
-        nums3.add(Arrays.asList(10));
-        nums3.add(Arrays.asList(15));
-        int[] result3 = solution.smallestRange(nums3);
-        System.out.println("Test 3: " + Arrays.toString(result3));
-        
-        // Test case 4: Overlapping ranges
-        List<List<Integer>> nums4 = new ArrayList<>();
-        nums4.add(Arrays.asList(1, 2, 3, 4, 5));
-        nums4.add(Arrays.asList(1, 2, 3, 4, 5));
-        int[] result4 = solution.smallestRange(nums4);
-        System.out.println("Test 4: " + Arrays.toString(result4));
-        
-        // Test case 5: Larger gap between lists
-        List<List<Integer>> nums5 = new ArrayList<>();
-        nums5.add(Arrays.asList(1, 100));
-        nums5.add(Arrays.asList(11, 200));
-        nums5.add(Arrays.asList(21, 300));
-        int[] result5 = solution.smallestRange(nums5);
-        System.out.println("Test 5: " + Arrays.toString(result5));
-        
-        // Test case 6: Three lists with common range
-        List<List<Integer>> nums6 = new ArrayList<>();
-        nums6.add(Arrays.asList(4, 10, 15, 24, 26));
-        nums6.add(Arrays.asList(0, 9, 12, 20));
-        nums6.add(Arrays.asList(5, 18, 22, 30));
-        int[] result6 = solution.smallestRange(nums6);
-        System.out.println("Test 6: " + Arrays.toString(result6));
+       
     }
     
 }
