@@ -25,6 +25,8 @@ questions.md
 # Precompiled Headers
 *.gch
 
+node_modules
+
 dbms/notes
 
 minHeap
