@@ -25,8 +25,10 @@ int main() {
 
     printf("Program running (PID: %d). Try pressing Ctrl+C...\n", getpid());
 
-    for (;;)
-        pause();
+    while (1) {
+        sleep(1);
+    }
+
 
     return 0;
 }
